@@ -38,7 +38,7 @@ public class LockService {
         redissonClient.getLock(getLockKey(accountNumber)).unlock();
     }
 
-    private static String getLockKey(String accountNumber) {
+    private String getLockKey(String accountNumber) {
         return "ACLK: " + accountNumber;
     }
 }
